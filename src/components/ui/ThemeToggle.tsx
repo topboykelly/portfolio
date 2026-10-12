@@ -12,6 +12,17 @@ function applyTheme(theme: Theme) {
   } catch {}
 }
 
+let fadeTimer: ReturnType<typeof setTimeout> | undefined;
+
+/** Cross-fades colours for browsers without the View Transitions API (e.g. Safari before iOS 18). */
+function fadeToTheme(theme: Theme) {
+  const root = document.documentElement;
+  root.classList.add("theme-fade");
+  applyTheme(theme);
+  clearTimeout(fadeTimer);
+  fadeTimer = setTimeout(() => root.classList.remove("theme-fade"), 500);
+}
+
 export function ThemeToggle({ className }: { className?: string }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -24,8 +35,12 @@ export function ThemeToggle({ className }: { className?: string }) {
     const next: Theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const button = buttonRef.current;
-    if (typeof document.startViewTransition !== "function" || reduceMotion || !button) {
+    if (reduceMotion) {
       applyTheme(next);
+      return;
+    }
+    if (typeof document.startViewTransition !== "function" || !button) {
+      fadeToTheme(next);
       return;
     }
 
