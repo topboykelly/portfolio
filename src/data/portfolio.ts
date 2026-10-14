@@ -107,10 +107,10 @@ export const projects = [
   {
     title: "Mutedeworld Fashion Store",
     description:
-      "An online storefront for a luxury fashion brand in Accra, with a product catalogue rendered from JavaScript data, animated category filters, and a shopping cart saved across pages.",
-    tech: ["HTML", "CSS", "JavaScript"],
+      "A full-stack online store for an Accra fashion brand, with product pages, size guides, a cart drawer, and a checkout that sends orders to the shop on WhatsApp. An admin dashboard lets the owner manage products and track orders, all backed by a Supabase database.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion"],
     image: "/projects/mutedeworld.png",
-    liveUrl: "https://topboykelly.github.io/mutedeworld/",
+    liveUrl: "https://mutedeworld.vercel.app/",
     repoUrl: "https://github.com/topboykelly/mutedeworld",
     featured: true,
   },
