@@ -1,5 +1,4 @@
 import { marquee } from "@/data/portfolio";
-import { Star4 } from "./ui/Sparkle";
 
 export function Marquee() {
   return (
@@ -17,7 +16,7 @@ export function Marquee() {
                 className="flex items-center gap-10 pr-10 text-xl font-semibold whitespace-nowrap md:text-2xl"
               >
                 {label}
-                <Star4 className="size-5 text-accent-light" />
+                <span aria-hidden="true" className="size-3 shrink-0 rounded-full bg-accent-light" />
               </li>
             ))}
           </ul>
