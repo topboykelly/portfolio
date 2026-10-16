@@ -13,7 +13,7 @@ export const profile = {
   ],
   email: "kellymartinssarp21@gmail.com",
   resumeUrl: "/resume.pdf",
-  portrait: "/profile.svg",
+  portrait: "/kelly.png",
   siteUrl: "https://kellymartinssarpong.dev",
   copyrightYear: 2026,
   socials: {

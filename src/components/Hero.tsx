@@ -117,8 +117,8 @@ export function Hero() {
               <Image
                 src={profile.portrait}
                 alt={`Portrait of ${profile.name}`}
-                width={420}
-                height={480}
+                width={373}
+                height={859}
                 priority
                 className="mx-auto h-auto w-full"
               />
