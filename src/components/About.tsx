@@ -23,8 +23,8 @@ export function About() {
             <Image
               src={profile.portrait}
               alt=""
-              width={373}
-              height={859}
+              width={681}
+              height={947}
               className="relative h-auto w-full"
             />
           </div>
