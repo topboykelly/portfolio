@@ -32,14 +32,14 @@ export function About() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-20 -left-2 flex items-center gap-3 rounded-2xl bg-surface p-4 shadow-xl shadow-black/10 sm:-left-8 dark:ring-1 dark:ring-white/10"
+            className="absolute bottom-16 left-0 z-10 flex items-center gap-2 rounded-2xl bg-surface p-2.5 shadow-xl shadow-black/10 sm:top-20 sm:bottom-auto sm:-left-8 sm:gap-3 sm:p-4 dark:ring-1 dark:ring-white/10"
           >
-            <span className="grid size-11 place-items-center rounded-full bg-accent text-white">
-              <Briefcase className="size-5" aria-hidden="true" />
+            <span className="grid size-8 place-items-center rounded-full bg-accent text-white sm:size-11">
+              <Briefcase className="size-4 sm:size-5" aria-hidden="true" />
             </span>
             <div>
-              <p className="text-xs text-muted">{projectsStat.label}</p>
-              <p className="text-2xl font-bold">
+              <p className="text-[10px] text-muted sm:text-xs">{projectsStat.label}</p>
+              <p className="text-lg font-bold sm:text-2xl">
                 {projectsStat.value}
                 {projectsStat.suffix}
               </p>
@@ -49,15 +49,15 @@ export function About() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute -right-2 bottom-24 flex items-center gap-3 rounded-2xl bg-night p-4 text-white shadow-xl shadow-black/20 sm:-right-6 dark:ring-1 dark:ring-white/10"
+            className="absolute right-0 bottom-6 z-10 flex items-center gap-2 rounded-2xl bg-night p-2.5 text-white shadow-xl shadow-black/20 sm:-right-6 sm:bottom-24 sm:gap-3 sm:p-4 dark:ring-1 dark:ring-white/10"
           >
-            <Star4 className="size-6 text-accent-light" />
+            <Star4 className="size-4 text-accent-light sm:size-6" />
             <div>
-              <p className="text-2xl font-bold">
+              <p className="text-lg font-bold sm:text-2xl">
                 {experienceStat.value}
                 {experienceStat.suffix}
               </p>
-              <p className="text-xs text-white/60">{experienceStat.label}</p>
+              <p className="text-[10px] text-white/60 sm:text-xs">{experienceStat.label}</p>
             </div>
           </motion.div>
         </Reveal>
